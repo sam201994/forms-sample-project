@@ -10,19 +10,19 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
-
-import GlobalStyle from '../../global-styles';
+import Form from 'containers/Form';
 
 export default function App() {
   return (
     <div>
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        <Route exact path="/" component={Form} />
         <Route component={NotFoundPage} />
       </Switch>
-      <GlobalStyle />
     </div>
   );
 }
+
+// import Header from 'components/Header';
+// <Header />
