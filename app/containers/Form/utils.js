@@ -40,7 +40,10 @@ const isValidSwedishSSN = (ssn = '') => {
   return true;
 };
 
-const isValidPhoneNum = () => true;
+const isValidPhoneNum = phoneNum => {
+  const re = /^[0][1-9]{1}(\d{6,8})$/;
+  return re.test(phoneNum);
+};
 
 const emailIsValid = email => {
   const re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
